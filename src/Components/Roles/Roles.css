@@ -1,0 +1,90 @@
+
+
+.containerRoles{
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+  margin-top: 50px;
+  background-color: #EEF2F4;
+}
+.boxRoles {
+  height: auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  align-items: center;
+  background-color: white;
+  margin: 15px;
+  border-radius:20px;
+  box-shadow: 20px 20px 11px -8px rgba(0,0,0,0.1);
+  transition: ease 0.7s;
+}
+
+.boxRoles img{
+  max-height: 200px;
+  margin: 15px;
+}
+
+.boxRoles h2{
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: ArialRounded;
+  color: #0C1528;
+  pointer-events: none;
+}
+
+.boxRoles img :hover{
+  pointer-events: none;
+}
+
+.containerRoles :hover img{
+  width: 0px;
+}
+.containerRoles p{
+  font-size: 0;
+}
+
+.containerRoles :hover p{
+  width: 75%;
+  margin-bottom: 50px;
+  font-size: 15px;
+  pointer-events: none;
+  text-align: center;
+}
+.containerRoles :hover h2{
+  margin: 0;
+  margin-bottom: 15px;
+}
+.containerRoles :hover img{
+  width: 0;
+  margin: 0px;
+  pointer-events: none;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .containerRoles {
+    flex-direction: column;  
+  }
+  .boxRoles {
+    width: auto;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    
+  }  
+
+}
+@media screen and (min-width: 768px) {
+  .containerRoles :hover{
+    width:50%;
+    margin-top: 10px;
+    max-height:fit-content;
+    justify-content: center;
+  }
+  
+}
