@@ -27,7 +27,6 @@ function Roles() {
       <div className='boxRoles'>
         <img src={speakers} alt="" />
         <h2>Conferencistas</h2>
-        <n></n>
         <p>Son profesores e investigadores invitados destacados a nivel latinoamericano por sus contribuciones a la educación, investigación, innovación y organización de eventos académicos con impacto internacional</p>
       </div>
     </div>

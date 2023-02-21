@@ -11,10 +11,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  
+  padding-left: 50px;
 }
 .image-containerInformation img {
-  max-width: 100%;
+  max-width: 90%;
 }  
   .text-containerInformation {
     width: 60%;
@@ -26,12 +26,17 @@
   
   .text-containerInformation h1{
     font-size: 3em;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .text-containerInformation p{
     width: 75%;
     text-align: center;
     margin-bottom: 25px;
+  }
+  .text-containerInformation button{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
  
@@ -47,7 +52,8 @@
     }
     .image-containerInformation {
         width: 90%;
-        margin-left: 30px;       
+        margin-left: 20px;
+        padding-left: 0;       
       }
       .image-containerInformation img {
         max-width: 100%;

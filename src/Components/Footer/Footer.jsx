@@ -2,9 +2,9 @@ import React from 'react'
 import './Footer.css'
 import facebook from '../../Img/Facebook.png'
 import whatsapp from '../../Img/Whatsapp.png'
-import logo from '../../Img/Logo.png'
+import logoFooter from '../../Img/LogoFooter.png'
 import email from '../../Img/Email.png'
-import logoUniversidad from '../../Img/LogoUniversidad.png'
+import logoUniversidad from '../../Img/LogoUniversidadMariana.png'
 
 
 function Footer() {
@@ -12,7 +12,7 @@ function Footer() {
     <div className="containerFooter">
       <div className="element1">
         <img src={logoUniversidad} alt="Imagen 1" />
-        <p>Universidad Cesmag</p>
+        
       </div>
       <div className="element2">
         <img src={facebook} alt="Imagen 2" />
@@ -27,8 +27,7 @@ function Footer() {
          <p>semillero@email.com</p>
       </div>
       <div className="element5">
-        <img src={logo} alt="Imagen 5" />
-        <p>Radiodiagnostíco y Radioterapia</p>
+        <img src={logoFooter} alt="Imagen 5" />
       </div>
     </div>
   );

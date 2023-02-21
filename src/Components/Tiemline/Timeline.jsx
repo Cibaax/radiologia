@@ -21,8 +21,8 @@ function Timeline() {
         <h2>Proximós Eventos</h2>
         <div className="arrow"></div>
       </div>
-      {onlyThree.map((data, index) => ( <div className='containerBoxTimeline'>
-                                          <div className='boxTimeline' id={`box${index+1}`} key={data.title}>
+      {onlyThree.map((data, index) => ( <div className='containerBoxTimeline' key={data.title}>
+                                          <div className='boxTimeline' id={`box${index+1}`}>
                                             <div className='boxesTimeline'>
                                               <h2 >{data.title}</h2>
                                               <div className='containerInfo'>

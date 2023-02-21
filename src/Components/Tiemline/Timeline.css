@@ -136,8 +136,7 @@ border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
   }
-  #box3{
-    
+  #box3{    
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px; 
   }
@@ -145,7 +144,6 @@ border-bottom-right-radius: 15px;
 }
 @media (min-width: 600px) {
   #box3{
-
     border-top-right-radius: 15px; 
     }
 }
