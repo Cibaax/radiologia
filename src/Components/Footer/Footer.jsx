@@ -10,10 +10,10 @@ import logoUniversidad from '../../Img/LogoUniversidadMariana.png'
 function Footer() {
   return (
     <div className="containerFooter">
-      <div className="element1">
+      <a href='https://www.umariana.edu.co/index.html' className="element1">
         <img src={logoUniversidad} alt="Imagen 1" />
         
-      </div>
+      </a>
       <div className="element2">
         <img src={facebook} alt="Imagen 2" />
         <p>@semillero</p>
@@ -26,9 +26,9 @@ function Footer() {
         <img src={email} alt="Imagen 4" />
          <p>semillero@email.com</p>
       </div>
-      <div className="element5">
+      <a href='/' className="element5">
         <img src={logoFooter} alt="Imagen 5" />
-      </div>
+      </a>
     </div>
   );
 }

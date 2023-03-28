@@ -56,6 +56,7 @@ const Form = () => {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
+        required
       />
       <input
         className="form-input"
@@ -64,6 +65,7 @@ const Form = () => {
         placeholder="Nombre"
         value={formData.name}
         onChange={handleChange}
+        required
       />
       <input
         className="form-input"
@@ -72,12 +74,14 @@ const Form = () => {
         placeholder="Universidad"
         value={formData.university}
         onChange={handleChange}
+        required
       />
       <select
         className="form-select"
         name="role"
         value={formData.role}
         onChange={handleChange}
+        required
       >
         <option value="">Selecciona un cargo</option>
         <option value="jurados">Jurados</option>

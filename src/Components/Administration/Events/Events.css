@@ -1,0 +1,18 @@
+.add{
+    width: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Events{
+    max-width: 100vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+}
