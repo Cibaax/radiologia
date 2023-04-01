@@ -4,6 +4,7 @@ import headerImg from '../../Img/Header.png'
 import logo from '../../Img/Logo.png'
 import Information from '../Information/Information';
 import Timeline from '../Tiemline/Timeline';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
