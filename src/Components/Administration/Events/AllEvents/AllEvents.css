@@ -1,10 +1,11 @@
-.eventsShowed{
-    width: 30%;
+.allEventsShowed{
+    width: 60%;
 }
 
-.eventsShowed h2{
+.allEventsShowed h2{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 button:disabled {
@@ -12,7 +13,7 @@ button:disabled {
     cursor: not-allowed;
   }
 
- .eventsShowed button{
+ .allEventsShowed button{
     width: auto;
     padding: 10px;
     border: none;
@@ -25,7 +26,22 @@ button:disabled {
 }
 
 
-.individualEventsShowed{
+.individualEvents{
     display: flex;
     align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px 20px rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
 }
+
+.eventContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .individualEvents {
+    background-color: white;
+    padding: 20px;
+  }

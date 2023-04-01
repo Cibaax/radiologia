@@ -3,6 +3,7 @@ import './Events.css';
 import EventAdd from './EventAdd/EventAdd';
 import EventShowed from './EventsShowed/EventsShowed';
 import AllEvents from './AllEvents/AllEvents';
+import NavBar from '../NavBar/NavBar'
 
 function Events() {
     const [showEvents, setShowEvents] = useState(false);
@@ -13,15 +14,16 @@ function Events() {
 
   return (
     <div className='Events'>
-      
-      <div>
+      <NavBar/>
+      <div className='tituloEvents'>
         <h1>Manejo de Eventos</h1>
-        <button className='add' onClick={handleButtonClick}> + </button>
+        <h2>Agregar Evento  <button className='add' onClick={handleButtonClick}> + </button></h2>
       {showEvents && <EventAdd />} 
     </div>
+    <div className='eventos2'>
     <AllEvents/>
     <EventShowed/>
-      
+    </div>      
     </div>
   );
 }

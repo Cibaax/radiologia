@@ -9,10 +9,32 @@
     font-weight: bold;
     cursor: pointer;
 }
-
+.tituloEvents h1{
+    color: #007bff;
+    
+}
 .Events{
     max-width: 100vw;
     background-color: #fff;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.tituloEvents{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tituloEvents h2{
+    display: flex;
+    align-items: center;
+}
+
+.eventos2{
+    width: 80vw;
+ display: flex;
+ justify-content: space-between;
 }

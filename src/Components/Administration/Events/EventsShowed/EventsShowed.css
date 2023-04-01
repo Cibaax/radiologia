@@ -1,10 +1,13 @@
 .eventsShowed{
     width: 30%;
+    
+    
 }
 
 .eventsShowed h2{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 button:disabled {
@@ -28,4 +31,9 @@ button:disabled {
 .individualEventsShowed{
     display: flex;
     align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px 20px rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
+    background-color: white;
 }

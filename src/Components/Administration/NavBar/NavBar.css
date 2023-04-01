@@ -1,0 +1,46 @@
+.vertical-nav-bar {
+    margin-right: 50px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    height: 98vh;
+    width: 80px;
+    position: fixed;
+    background-color: #007BFF;  
+    transition: 0.5s ease;
+    border-radius:15px;
+    
+}
+  
+  .vertical-nav-bar img {
+    width: 50%;
+  }
+  
+  .center-images {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .imageEnd {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+  }
+  
+  .imageStart{
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    
+  }
+  .center img{
+    margin: 10px;
+  }
+  .vertical-nav-bar a{
+    display: flex;
+    justify-content: center;
+  }
+  .vertical-nav-bar a :hover{
+    width: 55%;
+  }

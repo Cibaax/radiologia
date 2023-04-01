@@ -58,7 +58,7 @@ const EventsShowed = () => {
 
   return (
     <div className="eventsShowed">
-      {loading && <div>Cargando...</div>}
+      <h2>Proximos Eventos: {loading && <div>Cargando...</div>}</h2>
 
       {events.map((event, index) => (
         <div className=" individualEventsShowed" key={Math.random()}>

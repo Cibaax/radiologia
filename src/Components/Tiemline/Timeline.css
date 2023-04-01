@@ -8,7 +8,7 @@
 }
 
 .containerTimeline :hover img{
-  width: 40%;
+  width: 35%;
 }
 
 .box-arrow{
@@ -27,7 +27,7 @@
   border-bottom-left-radius: 15px; 
 }
 .box-arrow img{
-  width: 35%;
+  width: 30%;
   transition: 0.5s ease;  
 }
 .box-arrow h2{

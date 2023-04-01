@@ -58,21 +58,22 @@ function AllEvents() {
       };
   
     return (
-        <div className="eventsShowed">
-        {loading && <div>Cargando...</div>}
-  
+        <div className="allEventsShowed">
+        <h2>Todos los Eventos{loading && <div>Cargando...</div>}</h2>
+        <div className="eventContainer">
         {events.map((event, index) => (
-          <div className=" individualEventsShowed" key={Math.random()}>
+          <div className=" individualEvents" key={Math.random()}>
             <div>
               <h2>{event.title}<span>{event.day} <span>{event.month}</span></span></h2>
               <p>{event.description}</p>  
             </div>        
             <div className="buttonsMoveEvents">
               <button onClick={() => handleDelete(index)}>►</button>
-              <button onClick={() => handleSuprDelete(index)}>delete</button>
+              <button onClick={() => handleSuprDelete(index)}> x </button>
             </div>
           </div>
         ))}
+      </div>
       </div>
     );
   };

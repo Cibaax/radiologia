@@ -1,5 +1,6 @@
 .events-container {
-    width: 100%;
+    width: 50%;
+    bottom: 35%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -7,6 +8,7 @@
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+    position: absolute;
   }
   
   .events-container form {

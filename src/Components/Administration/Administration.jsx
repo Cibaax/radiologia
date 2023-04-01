@@ -4,7 +4,8 @@ import Events from './Events/Events'
 
 function Administration() {
   return (
-    <Events/>
+    <>     
+    </>
   )
 }
 
