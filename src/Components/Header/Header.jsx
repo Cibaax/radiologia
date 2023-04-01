@@ -16,9 +16,9 @@ function Header() {
     <>
     <div className="containerHeader" >
       <div className="text-containerHeader">
-        <a href='/administration' className="logo-containerHeader">
+        <Link to='/administration' className="logo-containerHeader">
           <img src={logo} id='123' alt="Logo" />
-        </a>
+        </Link>
         <h1>Semilleros de Investigación Radiodiagnostíco y Radioterapia</h1>
         <p>El encuentro de semilleros permite indagar y fortalecer la cultura investigativa; el evento permite profundizar temas relacionados a imágenes diagnósticas y Radioterapia, contribuyendo al progreso continuo de la medicina junto con sus ramas.</p>
         <button onClick={manejarClick}>Mas Información</button>
