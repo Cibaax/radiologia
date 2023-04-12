@@ -5,25 +5,30 @@ import calendar from '../../../Img/Calendar.png'
 import registred from '../../../Img/registred.png'
 import settings from '../../../Img/settings.png'
 import exit from '../../../Img/exit.png'
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
     <div className="vertical-nav-bar">
-      <img className='imageStart' src={logo} alt="Imagen 1" />
+      <Link to="/administration">
+        <img className='imageStart' src={logo} alt="Imagen 1" />
+      </Link>
       <div className="center-images">
         <div className='center'>            
-        <a href="/administration/events">
+        <Link to="/administration/events">
           <img className='imageCenter'  src={calendar} alt="Imagen 3" />
-        </a>
-        <a href="/administration/registred">
+        </Link>
+        <Link to="/administration/registred">
           <img className='imageCenter' src={registred} alt="Imagen 4" />
-        </a>
-        <a href="/administration/settings">
+        </Link>
+        <Link to="/administration/settings">
           <img className='imageCenter' src={settings} alt="Imagen 5" />
-        </a>
+        </Link>
         </div>
       </div>
-      <img className='imageEnd' src={exit} alt="Imagen 2" />
+      <Link to="/">
+        <img className='imageEnd' src={exit} alt="Imagen 2" />
+      </Link>
     </div>
   );
 }

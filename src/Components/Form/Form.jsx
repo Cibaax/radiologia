@@ -19,7 +19,7 @@ const Form = () => {
     return;
     }
   
-    axios.get('https://semillero-radiologia-default-rtdb.firebaseio.com/registered/.json')
+    axios.get('https://semillero-timeline-default-rtdb.firebaseio.com/registred.json')
       .then((res) => {
         if (!res.data) {
           setError('Error al obtener los datos');
@@ -32,7 +32,7 @@ const Form = () => {
           return;
         }
   
-        axios.post('https://semillero-radiologia-default-rtdb.firebaseio.com/registered/.json', formData)
+        axios.post('https://semillero-timeline-default-rtdb.firebaseio.com/registred.json', formData)
           .then((res) => {
             setFormData({ email: '', name: '', university: '', role: '' });
             setError('Registrado correctamente');

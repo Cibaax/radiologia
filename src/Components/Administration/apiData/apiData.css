@@ -1,0 +1,49 @@
+.data-table {
+    border-collapse: collapse;
+    margin: 10px;
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .data-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .download-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .download-button:hover {
+    background-color: #3e8e41;
+  }
+  
+
+  .filter-section select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+  }
+  
+  .filter-section select:focus {
+    outline: none;
+    border-color: #7FDBFF;
+  }
+  
+  .filter-section span {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  

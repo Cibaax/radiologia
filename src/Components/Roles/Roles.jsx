@@ -1,33 +1,37 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Roles.css'
-import assistants from '../../Img/Assistants.png'
-import jurors from '../../Img/Jurors.png'
-import orators from '../../Img/Orators.png'
-import speakers from '../../Img/Speakers.png'
 
 
 function Roles() {
+  const [datos, setDatos] = useState({});
+
+  useEffect(() => {
+    fetch('https://semillero-timeline-default-rtdb.firebaseio.com/data/0.json')
+      .then(response => response.json())
+      .then(data => setDatos(data))
+      .catch(error => console.error(error));
+  }, []);
   return (
     <div className='containerRoles'>
       <div className='boxRoles'>
-        <img src={jurors} alt="" />
+        <img src={datos.imageEvaluadores} alt="" />
         <h2>Evaluadores</h2>
-        <p>Son profesores seleccionados mediante invitación directa de los coordinadores de semilleros de la universidad para participar, quienes serán escogidos por su cualificación y experiencia profesional.</p>
+        <p>{datos.textEvaluadores}</p>
       </div>
       <div className='boxRoles'>
-        <img src={assistants} alt="" />
+        <img src={datos.imageAsistentes} alt="" />
         <h2>Asistentes</h2>
-        <p>Son los estudiantes, profesionales o visitantes que tienen el objetivo de ser partícipes del evento, siendo certificados por ello.</p>
+        <p>{datos.textAsistentes}</p>
       </div>
       <div className='boxRoles'>
-        <img src={orators} alt="" />
+        <img src={datos.imagePonentes} alt="" />
         <h2>Ponentes</h2>
-        <p>Son los estudiantes de Radiología los cuales expondrán los temas de investigación que están llevando a cabo.</p>          
+        <p>{datos.textPonentes}</p>          
       </div>
       <div className='boxRoles'>
-        <img src={speakers} alt="" />
+        <img src={datos.imageConferencistas} alt="" />
         <h2>Conferencistas</h2>
-        <p>Son profesores e investigadores invitados destacados a nivel latinoamericano por sus contribuciones a la educación, investigación, innovación y organización de eventos académicos con impacto internacional</p>
+        <p>{datos.textConferencistas}</p>
       </div>
     </div>
   )

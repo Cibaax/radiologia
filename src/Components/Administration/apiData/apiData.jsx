@@ -1,11 +1,14 @@
 import React from 'react';
 import * as XLSX from 'xlsx';
+import './apiData.css';
 
 function ApiData() {
   const [data, setData] = React.useState([]);
+  
+  const [filter, setFilter] = React.useState('');
 
   React.useEffect(() => {
-    fetch('https://semillero-radiologia-default-rtdb.firebaseio.com/registered.json')
+    fetch('https://semillero-timeline-default-rtdb.firebaseio.com/registred.json')
       .then(response => response.json())
       .then(data => setData(data));
   }, []);
@@ -17,13 +20,25 @@ function ApiData() {
     XLSX.writeFile(workbook, "datos.xlsx");
   }
 
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
+  }
   return (
     <div>
-      <table>
+      <div className="filter-section">
+        <span>Filtrar por cargo:</span>
+        <select value={filter} onChange={handleFilterChange}>
+          <option value="">Mostrar todos</option>
+          <option value="ponentes">Ponentes</option>
+          <option value="asistentes">Asistentes</option>
+          <option value="conferencistas">Conferencistas</option>
+          <option value="jurados">Jurados</option>
+        </select>
+      </div>
+      <table className="data-table">
         <thead>
           <tr>
-            <th>Nombre</th>
-            
+            <th>Nombre</th>            
             <th>Correo electrónico</th>
             <th>Universidad</th>
             <th>Cargo</th>
@@ -31,16 +46,18 @@ function ApiData() {
         </thead>
         <tbody>
           {Object.entries(data).map(([key, value]) => (
-            <tr key={key}>
-              <td>{value.name}</td>              
-              <td>{value.email}</td>
-              <td>{value.university}</td>
-              <td>{value.role}</td>
-            </tr>
+            (filter === '' || value.role === filter) && (
+              <tr key={key}>
+                <td>{value.name}</td>              
+                <td>{value.email}</td>
+                <td>{value.university}</td>
+                <td>{value.role}</td>
+              </tr>
+            )
           ))}
         </tbody>
       </table>
-      <button onClick={downloadExcel}>Descargar datos en Excel</button>
+      <button className="download-button" onClick={downloadExcel}>Descargar datos en Excel</button>
     </div>
   );
 }

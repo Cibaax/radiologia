@@ -1,13 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Header.css'
-import headerImg from '../../Img/Header.png'
 import logo from '../../Img/Logo.png'
 import Information from '../Information/Information';
 import Timeline from '../Tiemline/Timeline';
-import { Link } from 'react-router-dom';
 
 
 function Header() {
+  const [datos, setDatos] = useState({});
+
+  useEffect(() => {
+    fetch('https://semillero-timeline-default-rtdb.firebaseio.com/data/0.json')
+      .then(response => response.json())
+      .then(data => setDatos(data))
+      .catch(error => console.error(error));
+  }, []);
   const refElemento = useRef(null);
 
   const manejarClick = () => {
@@ -17,15 +23,15 @@ function Header() {
     <>
     <div className="containerHeader" >
       <div className="text-containerHeader">
-        <Link to='/administration' className="logo-containerHeader">
+        <div to='/administration' className="logo-containerHeader">
           <img src={logo} id='123' alt="Logo" />
-        </Link>
+        </div>
         <h1>Semilleros de Investigación Radiodiagnostíco y Radioterapia</h1>
-        <p>El encuentro de semilleros permite indagar y fortalecer la cultura investigativa; el evento permite profundizar temas relacionados a imágenes diagnósticas y Radioterapia, contribuyendo al progreso continuo de la medicina junto con sus ramas.</p>
+        <p>{datos.textSemillero}</p>
         <button onClick={manejarClick}>Mas Información</button>
       </div>
       <div className="image-containerHeader">
-        <img src={headerImg} alt="Img rigth"/>
+        <img src={datos.imageSemillero} alt="Img rigth"/>
       </div>
     </div>
         <Timeline/>

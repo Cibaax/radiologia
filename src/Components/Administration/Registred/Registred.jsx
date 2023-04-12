@@ -1,11 +1,11 @@
 import React from 'react'
 import ApiData from '../apiData/apiData'
-
+import './Registred.css'
 function Registred() {
   return (
-    <div>
+    <div className='registredColumn'>
       <ApiData/>
-        Registred</div>
+    </div>
   )
 }
 

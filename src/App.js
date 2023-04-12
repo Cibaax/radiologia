@@ -7,6 +7,8 @@ import Requirements from './Components/Requirements/Requirements';
 import Events from './Components/Administration/Events/Events';
 import Registred from './Components/Administration/Registred/Registred';
 import NavBar from './Components/Administration/NavBar/NavBar';
+import Settings from './Components/Administration/Settings/Settings';
+import Functions from './Components/Administration/Functions/Functions';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           <Route path="/administration" element={<><Administration/><NavBar/></>}></Route>
           <Route path="/administration/events" element={<><Events/><NavBar/></>}></Route>
           <Route path="/administration/registred" element={<><Registred/><NavBar/></>}></Route>
+          <Route path="/administration/settings" element={<><Settings/><NavBar/></>}></Route>
+          <Route path="/prueba" element={<Functions/>}></Route>          
         </Routes>
       </BrowserRouter>
     </div>
