@@ -1,6 +1,5 @@
 import React from 'react'
 import './Copyrigth.css'
-import { Link } from 'react-router-dom'
 
 function Copyrigth() {
   return (
