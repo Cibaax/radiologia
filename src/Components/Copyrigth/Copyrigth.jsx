@@ -7,7 +7,6 @@ function Copyrigth() {
     <div className="containerCopyrigth">
       <div className="lineCopyrigth"></div>
       <div className="textCopyrigth">© 2023 Copyrigth</div>
-      <Link to='/administration' className='point'><p>.</p></Link>
     </div>
   )
 }
