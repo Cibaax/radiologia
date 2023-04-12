@@ -3,7 +3,7 @@ import './Header.css'
 import logo from '../../Img/Logo.png'
 import Information from '../Information/Information';
 import Timeline from '../Tiemline/Timeline';
-
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [datos, setDatos] = useState({});
@@ -23,9 +23,9 @@ function Header() {
     <>
     <div className="containerHeader" >
       <div className="text-containerHeader">
-        <div to='/administration' className="logo-containerHeader">
+        <Link to='/administration' className="logo-containerHeader">
           <img src={logo} id='123' alt="Logo" />
-        </div>
+        </Link>
         <h1>Semilleros de Investigación Radiodiagnostíco y Radioterapia</h1>
         <p>{datos.textSemillero}</p>
         <button onClick={manejarClick}>Mas Información</button>
