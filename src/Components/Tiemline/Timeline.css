@@ -57,6 +57,15 @@
   padding: 20px;
   transition: 0.5s;
 }
+.boxTimeline2{
+  width: 250px;
+  height: 150px;
+  background-color: #ffffff;
+  position: relative;
+  right: 21px;
+  padding: 20px;
+  transition: 0.5s;
+}
 
 .lineTimeline{
   top:10px;    
@@ -82,6 +91,7 @@ height: 98px;
 margin: 10px;
 margin-left: 15px;
 overflow: hidden;
+font-size: 16px;
 }
 .containerInfo2 p{
   width: 500px;
@@ -93,14 +103,21 @@ overflow: hidden;
 .containerInfo{
 display: flex;
 pointer-events: none;
+position: inherit;
+    top: -8px;
 }.containerInfo2{
   display: flex;
   pointer-events: none;
   }
 
-.boxesTimeline{
-pointer-events: none;
-}
+  .boxesTimeline{
+    pointer-events: none;
+    top: -14px;
+        position: inherit;
+    }
+    .boxesTimeline2{
+      pointer-events: none;
+      }
 .containerDate{
   margin-top: 25px;
 }
@@ -108,7 +125,9 @@ pointer-events: none;
 text-align: center;
 margin: 0;
 }
-
+.boxesTimeline2 h2{
+  width: 30vw;
+}
 #box3{
 
 border-bottom-right-radius: 15px; 

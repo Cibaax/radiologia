@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './Roles.css'
+import { Link } from 'react-router-dom';
 
 
 function Roles() {
@@ -17,6 +18,7 @@ function Roles() {
         <img src={datos.imageEvaluadores} alt="" />
         <h2>Evaluadores</h2>
         <p>{datos.textEvaluadores}</p>
+        <Link className='Link' to={datos.urlForm}><button className='buttonRoles ev'>Formato de Evaluación</button></Link>
       </div>
       <div className='boxRoles'>
         <img src={datos.imageAsistentes} alt="" />
@@ -26,7 +28,8 @@ function Roles() {
       <div className='boxRoles'>
         <img src={datos.imagePonentes} alt="" />
         <h2>Ponentes</h2>
-        <p>{datos.textPonentes}</p>          
+        <p>{datos.textPonentes}</p>
+        <Link className='Link' to={datos.urlForm2}><button className='buttonRoles pon'>Subir Resumen</button></Link>
       </div>
       <div className='boxRoles'>
         <img src={datos.imageConferencistas} alt="" />

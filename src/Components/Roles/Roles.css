@@ -7,6 +7,11 @@
   margin-top: 50px;
   background-color: #EEF2F4;
 }
+
+
+.buttonRoles{
+  display: none;
+}
 .boxRoles {
   height: auto;
   width: 500px;
@@ -39,6 +44,19 @@
   pointer-events: none;
 }
 
+.boxRoles .buttonRoles{
+  position: relative;
+  width: auto;
+}
+.buttonRoles :hover{
+   width: auto;
+}
+.boxRoles .ev{  
+  top: -25px;
+}
+.boxRoles .pon{  
+  top: -5px;
+}
 .containerRoles :hover img{
   width: 0px;
 }
@@ -46,6 +64,9 @@
   font-size: 0;
 }
 
+.containerRoles :hover .buttonRoles{
+  display: block;
+}
 .containerRoles :hover p{
   width: 75%;
   margin-bottom: 50px;
@@ -84,5 +105,11 @@
     max-height:fit-content;
     justify-content: center;
   }
-  
+  .containerRoles  :hover .buttonRoles{
+    width: auto;
+  }
+  .containerRoles  :hover .Link{
+    width: auto;
+  }
+
 }

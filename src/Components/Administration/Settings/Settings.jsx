@@ -40,6 +40,8 @@ function Settings() {
         imagePonentes: event.target.imagePonentes.value,
         imageConferencistas: event.target.imageConferencistas.value,
         textRequerimientos: event.target.textRequerimientos.value,
+        urlForm: event.target.urlForm.value,
+        urlForm2: event.target.urlForm2.value,
       }),
     })
     .then((response) => {
@@ -110,6 +112,12 @@ function Settings() {
           <br />
           <label htmlFor="textRequerimientos">Requerimientos:</label>
           <textarea type="textRequerimientos" id="textRequerimientos" name="textRequerimientos" defaultValue={item.textRequerimientos} />
+          <br />
+          <label htmlFor="urlForm">Url Formulario Evaluadores:</label>
+          <textarea type="urlForm" id="urlForm" name="urlForm" defaultValue={item.urlForm} />
+          <br />
+          <label htmlFor="urlForm2">Url Formulario Ponentes:</label>
+          <textarea type="urlForm2" id="urlForm2" name="urlForm2" defaultValue={item.urlForm2} />
           <br />
           <button type="submit">Actualizar</button>
           {updateSuccess && <p className='true'>Los datos se actualizaron correctamente.</p>}
