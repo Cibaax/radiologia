@@ -1,0 +1,17 @@
+.anexosContainer{
+    width: 100vw;
+}
+.pdfContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.buttonsPdf{
+    margin: 15px;
+ width: 15%;
+}
+
+.pdfViewer{
+    margin-top: 30px;
+    width: 80%;
+}   

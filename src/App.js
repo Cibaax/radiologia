@@ -8,10 +8,11 @@ import Events from './Components/Administration/Events/Events';
 import Registred from './Components/Administration/Registred/Registred';
 import NavBar from './Components/Administration/NavBar/NavBar';
 import Settings from './Components/Administration/Settings/Settings';
-import Functions from './Components/Administration/Functions/Functions';
-
+import Files from './Components/Administration/Files/Files';
+import Anexos from './Components/Anexos/Anexos';
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -22,7 +23,8 @@ function App() {
           <Route path="/administration/events" element={<><Events/><NavBar/></>}></Route>
           <Route path="/administration/registred" element={<><Registred/><NavBar/></>}></Route>
           <Route path="/administration/settings" element={<><Settings/><NavBar/></>}></Route>
-          <Route path="/prueba" element={<Functions/>}></Route>          
+          <Route path="/administration/Files" element={<><Files/><NavBar/></>}></Route>
+          <Route path="/anexos" element={<Anexos/>}></Route>          
         </Routes>
       </BrowserRouter>
     </div>

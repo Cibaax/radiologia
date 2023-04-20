@@ -33,6 +33,14 @@ function Timeline() {
       return "21px"; // ajusta el tamaño de letra a 24px para títulos con menos de 20 caracteres
     }
   }
+   const getFontSize2 = (text) => {
+    const titleLength = text.length;
+    if (titleLength > 20) {
+      return "18px"; // ajusta el tamaño de letra a 18px para títulos con más de 20 caracteres
+    } else {
+      return "21px"; // ajusta el tamaño de letra a 24px para títulos con menos de 20 caracteres
+    }
+  }
 
   return (
     <div className="containerTimeline">
@@ -47,7 +55,7 @@ function Timeline() {
           <button className="close-button"onClick={handleCloseAllEvents}>&times;</button>
           {data.map((event) => (
             <div className='boxesTimeline2' key={event.title}>
-              <h2 style={{ fontSize: getFontSize(event.title) }}>{event.title}</h2>
+              <h2 style={{ fontSize: getFontSize2(event.title) }}>{event.title}</h2>
               <div className='containerInfo2'>
                 <div className='containerDate'>
                   <h3>{event.day}</h3>

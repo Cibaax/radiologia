@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Settings.css'
+import Files from '../Files/Files';
 function Settings() {
   const [data, setData] = useState([]);
   const [updateSuccess, setUpdateSuccess] = useState(false);
@@ -124,6 +125,8 @@ function Settings() {
           {!updateSuccess && updateSuccess !== null && <p> </p>}
         </form>
       ))}
+      <Files/>
+      
     </div>
   );
 }
