@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 function PDFViewer(props) {
-  const [pdfUrls, setPDFUrls] = useState(props.pdfUrls);
+  const [pdfUrls] = useState(props.pdfUrls);
   const [currentPDFUrl, setCurrentPDFUrl] = useState(pdfUrls[0]);
-
+    
   const handleLinkClick = (event, pdfUrl) => {
     event.preventDefault();
     setCurrentPDFUrl(pdfUrl);
@@ -52,7 +52,7 @@ function PDFViewer(props) {
           </a>
         ))}
       </div>
-      <iframe className='pdfViewer' title='' src={currentPDFUrl} width="100%" height="600px"></iframe>
+      <iframe className='pdfViewer' title='name' src={currentPDFUrl} width="100%" height="600px"></iframe>
     </div>
   );
 }
