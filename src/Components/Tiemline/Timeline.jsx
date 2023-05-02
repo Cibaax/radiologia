@@ -46,12 +46,12 @@ function Timeline() {
     <div className="containerTimeline">
       <div className="box-arrow" onClick={handleShowAllEvents}>
         <img src={calendar} alt="imgCalendar" />
-        <h2>Proximós Eventos</h2>
+        <h2>Próximos Eventos</h2>
         <div className="arrow"></div>
       </div>
       {showAllEvents && (
         <div className="all-events-container">
-          <h1>Proximós Eventos</h1>
+          <h1>Proxímos Eventos</h1>
           <button className="close-button"onClick={handleCloseAllEvents}>&times;</button>
           {data.map((event) => (
             <div className='boxesTimeline2' key={event.title}>
